@@ -2,8 +2,8 @@ def substrings (string, dictionary)
   string_array = string.split
   result_hash = {}
   
-  string_array.each do |og_string|
-    dictionary.each do |word|
+  dictionary.each do |word|
+    string_array.each do |og_string|
         if og_string.downcase.include?(word.downcase) then
           if result_hash[word] then
             result_hash[word] += 1
@@ -13,6 +13,7 @@ def substrings (string, dictionary)
         end
     end
   end
+  
   result_hash
 end
 
